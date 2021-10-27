@@ -1,6 +1,10 @@
 # Watermark
 
 Simple project to add watermark to an image.
+THIS IS NOT A PRODUCTION READY PROJECT.
+
+This is only a little fun project I did.
+
 <div align="center">
 <img src="Frontend/demo.gif">
 </div>
