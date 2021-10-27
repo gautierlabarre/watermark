@@ -1,0 +1,30 @@
+version: "3"
+services:
+  backend:
+    container_name: watermark_backend 
+    working_dir: /usr/app
+    build:
+        context: ./Backend
+    volumes:
+      - ./Backend:/usr/app
+      - /usr/app/node_modules
+    ports: 
+      - '8088:8088' 
+    networks:
+      - watermark
+  
+  frontend:
+    container_name: watermark_frontend
+    build:
+      context: ./Frontend
+    volumes:
+      - ./Frontend:/app
+      - /app/node_modules/
+    ports:
+      - '8080:8080'
+    networks:
+      - watermark
+
+networks:
+  watermark:
+    driver: bridge

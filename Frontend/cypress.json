@@ -1,0 +1,8 @@
+{
+    "baseUrl": "http://localhost:8888",
+    "viewportHeight": 1080,
+    "viewportWidth": 1920,
+    "testFiles": [
+        "index.spec.ts"
+    ]
+}

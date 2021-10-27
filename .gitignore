@@ -1,0 +1,7 @@
+.history/
+/node_modules/
+Backend/test.png
+Backend/test2.png
+Frontend/.nyc_output/
+Frontend/coverage/
+Frontend/cypress/downloads/
