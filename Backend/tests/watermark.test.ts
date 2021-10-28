@@ -1,12 +1,9 @@
-const request = require("supertest");
-const app = require("../server-test");
-const fs = require("fs");
-const fsExtra = require("fs-extra");
+import request from 'supertest';
+import app from '../app-test'
 
 /**
- * Tests for ByDates API
+ * Tests for *add-watermark* API
  */
-
 const data = [
     {
         font: {
