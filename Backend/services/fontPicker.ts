@@ -1,51 +1,53 @@
-const Jimp = require("jimp");
+import Jimp from "jimp";
+import { FontSize } from "../Enums/fontSize.enum";
 
-module.exports = {
-    selectBlackFontSize: (size) => {
+export default class FontPicker {
+    public static selectBlackFontSize (size: string) {
         let font = Jimp.FONT_SANS_16_BLACK;
 
         switch (size) {
-            case "small":
+            case FontSize.SMALL:
                 font = Jimp.FONT_SANS_8_BLACK;
                 break;
-            case "normal":
+            case FontSize.NORMAL:
                 font = Jimp.FONT_SANS_16_BLACK;
                 break;
-            case "big":
+            case FontSize.BIG:
                 font = Jimp.FONT_SANS_32_BLACK;
                 break;
-            case "huge":
+            case FontSize.HUGE:
                 font = Jimp.FONT_SANS_64_BLACK;
                 break;
-            case "massive":
+            case FontSize.MASSIVE:
                 font = Jimp.FONT_SANS_128_BLACK;
                 break;
         }
 
         return font;
-    },
+    }
 
-    selectWhiteFontSize: (size) => {
+    public static selectWhiteFontSize (size: string) {
         let font = Jimp.FONT_SANS_16_WHITE;
 
         switch (size) {
-            case "small":
+            case FontSize.SMALL:
                 font = Jimp.FONT_SANS_8_WHITE;
                 break;
-            case "normal":
+            case FontSize.NORMAL:
                 font = Jimp.FONT_SANS_16_WHITE;
                 break;
-            case "big":
+            case FontSize.BIG:
                 font = Jimp.FONT_SANS_32_WHITE;
                 break;
-            case "huge":
+            case FontSize.HUGE:
                 font = Jimp.FONT_SANS_64_WHITE;
                 break;
-            case "massive":
+            case FontSize.MASSIVE:
                 font = Jimp.FONT_SANS_128_WHITE;
                 break;
         }
 
         return font;
-    },
-};
+    }
+}
+

@@ -1,8 +1,8 @@
-const request = require("supertest");
-const app = require("../server-test");
+import request from 'supertest';
+import app from '../app-test'
 
 /**
- * Tests for ByDates API
+ * Tests for *homepage* API
  */
 describe("Homepage API", () => {
     it("should display a 200", async () => {

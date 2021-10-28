@@ -1,17 +1,17 @@
-const request = require("supertest");
-const app = require("../server-test");
-const fs = require("fs");
-const fsExtra = require("fs-extra");
+import request from 'supertest';
+import app from '../app-test'
+import fs from "fs"
+import fsExtra from "fs-extra";
 
-/**
- * Tests for ByDates API
- */
 
 beforeAll(() => {
     // We clean the upload directory before.
     fsExtra.emptyDirSync(`${__dirname}/../upload/`);
 });
 
+/**
+ * Tests for *send-image* API
+ */
 describe("Send Image API", () => {
     it("should return 200 when image is uploaded", async () => {
         const res = await request(app).post("/sendImage").set("content-type", "multipart/form-data").attach("file", `${__dirname}/favicon.png`);
@@ -29,7 +29,7 @@ describe("Send Image API", () => {
 });
 
 /**
- * Tests for ByDates API
+ * Tests for *show-image* API
  */
 describe("Show Image API", () => {
     it("should return 404 when the image does not exist", async () => {

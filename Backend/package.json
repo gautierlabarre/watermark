@@ -2,32 +2,42 @@
     "name": "watermark-backend",
     "version": "1.0.0",
     "description": "Watermark generator in nodejs with a frontend in svelte.",
-    "main": "app.js",
+    "main": "app.ts",
     "author": "Gautier LABARRE",
     "scripts": {
         "build": "webpack",
-        "run": "node app.js",
-        "start": "nodemon app.js",
+        "run": "ts-node app.ts",
+        "start": "nodemon app.ts",
         "test": "jest --verbose --detectOpenHandles --coverage"
     },
     "dependencies": {
         "body-parser": "^1.19.0",
         "cors": "2.8.5",
         "express": "4.17.1",
-        "jest": "^27.2.5",
         "jimp": "^0.16.1",
         "multer": "^1.4.3",
-        "nodemon": "^2.0.7",
-        "supertest": "^6.1.6"
+        "nodemon": "^2.0.7"
     },
     "devDependencies": {
         "@babel/core": "^7.14.5",
         "@babel/preset-env": "^7.14.5",
+        "@types/cors": "^2.8.12",
+        "@types/express": "^4.17.13",
+        "@types/fs-extra": "^9.0.13",
         "@types/jest": "^27.0.2",
+        "@types/multer": "^1.4.7",
+        "@types/node": "^16.11.6",
+        "@types/supertest": "^2.0.11",
         "babel-jest": "^27.0.2",
-        "fs-extra": "^10.0.0"
+        "fs-extra": "^10.0.0",
+        "jest": "^27.3.1",
+        "ts-jest": "^27.0.7",
+        "supertest": "^6.1.6",
+        "typescript": "^4.4.4",
+        "ts-node": "^10.4.0"
     },
     "jest": {
+        "preset": "ts-jest",
         "testEnvironment": "node",
         "coveragePathIgnorePatterns": [
             "/node_modules/",
