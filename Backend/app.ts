@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 8088;
 app.use("/", routes);
 
 app.listen(PORT, () => {
-    console.log(`Server Running here 👉 https://localhost:${PORT}`);
+    console.log(`Server Running here 👉 http://localhost:${PORT}`);
 });
 
 export default app;
