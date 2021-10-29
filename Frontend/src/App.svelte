@@ -1,16 +1,16 @@
 <script lang="ts">
-    import { onMount } from "svelte";
-    import Dropzone from "svelte-file-dropzone";
-    import WatermarkItem from "./components/WatermarkItem.svelte";
-    import WatermarkFontOptions from "./components/WatermarkFontOptions.svelte";
-    import Preview from "./components/Preview.svelte";
-    import Http from "./services/http.service";
-    import type { Watermark } from "./types/watermark.type";
-    import type { Font } from "./types/font.type";
-    import { FontSize } from "./Enums/fontSize.enum";
-    import { FontColor } from "./Enums/fontColor.enum";
-    import { faPlus, faImage, faSpinner } from "@fortawesome/free-solid-svg-icons";
-    import { FontAwesomeIcon } from "fontawesome-svelte";
+    import { onMount } from 'svelte';
+    import Dropzone from 'svelte-file-dropzone';
+    import WatermarkItem from './components/WatermarkItem.svelte';
+    import WatermarkFontOptions from './components/WatermarkFontOptions.svelte';
+    import Preview from './components/Preview.svelte';
+    import Http from './services/http.service';
+    import type { Watermark } from './types/watermark.type';
+    import type { Font } from './types/font.type';
+    import FontSize from './Enums/fontSize.enum';
+    import FontColor from './Enums/fontColor.enum';
+    import { faPlus, faImage, faSpinner } from '@fortawesome/free-solid-svg-icons';
+    import { FontAwesomeIcon } from 'fontawesome-svelte';
 
     let files = { accepted: [] }; // Can add rejected array.
     let uploadedImageName: string = null;
@@ -30,7 +30,7 @@
      * Add new watermark to the watermark array.
      */
     function addWatermark(): void {
-        watermarks = watermarks.concat({ x: 0, y: 0, content: "" });
+        watermarks = watermarks.concat({ x: 0, y: 0, content: '' });
     }
 
     /**
@@ -64,7 +64,7 @@
 
         let formData = new FormData();
         files.accepted.forEach((file) => {
-            formData.append("file", file);
+            formData.append('file', file);
         });
 
         uploadedImageName = await Http.sendImage(formData);
@@ -119,15 +119,14 @@
                 <FontAwesomeIcon icon={faPlus} />
             </button>
         </div>
-        
 
         {#if uploadedImageName}
             <div class="flex flex-col w-full justify-center">
                 <button class="btn {loading ? 'btn-gray' : 'btn-blue'} w-3/4 self-center uppercase" on:click={generateWatermarkedImage} data-cy="generateWatermark">
                     {#if loading}
-                    <FontAwesomeIcon class="animate-spin"  icon={faSpinner} /> Chargement en cours...
+                        <FontAwesomeIcon class="animate-spin" icon={faSpinner} /> Chargement en cours...
                     {:else}
-                    <FontAwesomeIcon icon={faImage} /> Générer l'image
+                        <FontAwesomeIcon icon={faImage} /> Générer l'image
                     {/if}
                 </button>
             </div>

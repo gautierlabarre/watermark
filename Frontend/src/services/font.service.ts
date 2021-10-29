@@ -1,5 +1,5 @@
-import type { Font as FontType } from './../types/font.type';
-import { FontSize } from "../Enums/fontSize.enum";
+import type { Font as FontType } from '../types/font.type';
+import FontSize from '../Enums/fontSize.enum';
 
 export default class Font {
     /**
@@ -12,9 +12,6 @@ export default class Font {
             case FontSize.SMALL:
                 shift = 10;
                 break;
-            case FontSize.NORMAL:
-                shift = 33;
-                break;
             case FontSize.BIG:
                 shift = 30;
                 break;
@@ -23,6 +20,9 @@ export default class Font {
                 break;
             case FontSize.MASSIVE:
                 shift = 10;
+                break;
+            default:
+                shift = 33;
                 break;
         }
 
