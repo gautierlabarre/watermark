@@ -1,7 +1,7 @@
 <script lang="ts">
-    import { FontColor } from "../Enums/fontColor.enum";
-    import { FontSize } from "../Enums/fontSize.enum";
-    import type { Font } from "../types/font.type";
+    import FontColor from '../Enums/fontColor.enum';
+    import FontSize from '../Enums/fontSize.enum';
+    import type { Font } from '../types/font.type';
 
     export let font: Font;
 </script>

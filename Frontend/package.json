@@ -1,31 +1,41 @@
 {
   "name": "watermark-frontend",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Watermark generator in svelte typescript with a backend in node.",
   "scripts": {
     "build": "rollup -c",
     "serve": "rollup -c -w",
     "start": "sirv public --no-clear --host 0.0.0.0 -p 8080",
     "tests": "sirv public --no-clear -p 8888",
-    "check": "svelte-check --tsconfig tsconfig.json"
+    "check": "svelte-check --tsconfig tsconfig.json",
+    "lint": "eslint"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.9.11",
-    "@rollup/plugin-commonjs": "^21.0.1",
-    "@rollup/plugin-node-resolve": "^13.0.6",
-    "@rollup/plugin-typescript": "^8.3.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-typescript": "^8.3.0",
     "@tailwindcss/forms": "^0.3.4",
     "@tsconfig/svelte": "^2.0.1",
-    "autoprefixer": "^10.3.7",
-    "cypress": "^8.6.0",
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "^5.2.0",
+    "autoprefixer": "^10.4.0",
+    "cypress": "^8.7.0",
     "cypress-file-upload": "^5.0.8",
     "cypress-svelte-unit-test": "^3.3.4",
-    "postcss": "^8.3.11",
-    "rollup": "^2.58.0",
+    "eslint": "^8.1.0",
+    "eslint-config-airbnb-typescript": "^14.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-promise": "^5.1.1",
+    "eslint-plugin-svelte3": "^3.2.1",
     "fontawesome-svelte": "^2.0.1",
+    "postcss": "^8.3.11",
+    "rollup": "^2.58.3",
     "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-istanbul": "^3.0.0",
     "rollup-plugin-livereload": "^2.0.5",
@@ -40,9 +50,10 @@
     "typescript": "^4.4.4"
   },
   "dependencies": {
-    "axios": "^0.23.0",
+    "axios": "^0.24.0",
     "sirv-cli": "^1.0.14",
-    "svelte-drag": "^2.0.1",
-    "svelte-file-dropzone": "^0.0.15"
+    "svelte-drag": "^2.0.2",
+    "svelte-file-dropzone": "^0.0.15",
+    "undefined": "^0.1.0"
   }
 }
