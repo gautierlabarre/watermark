@@ -1,13 +1,15 @@
 {
-  "compilerOptions": {                        
+  "compilerOptions": {       
+    "baseUrl":".",                 
     "target": "es6",                               
     "module": "commonjs",                           
-    "outDir": "./dist",                             
     "strict": true,
     "moduleResolution": "node",
-    "esModuleInterop": true,                       
+    "esModuleInterop": true,                
   },
+  "include": ["**/*.ts"],
   "exclude":[
     "./node_modules"
-  ]
+  ],
+  
 }
