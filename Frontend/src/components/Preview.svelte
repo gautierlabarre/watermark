@@ -1,13 +1,13 @@
 <script lang="ts">
-    import { createEventDispatcher, onMount } from "svelte";
-    import { Events } from "../Enums/events.enum";
-    import { draggable } from "svelte-drag";
-    import type { Font } from "../types/font.type";
-    import type { Watermark } from "../types/watermark.type";
-    import type { DragOptions } from "svelte-drag";
-    import FontService from "../services/font.service";
-    import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
-    import { FontAwesomeIcon } from "fontawesome-svelte";
+    import { createEventDispatcher, onMount } from 'svelte';
+    import Events from '../Enums/events.enum';
+    import { draggable } from 'svelte-drag';
+    import type { Font } from '../types/font.type';
+    import type { Watermark } from '../types/watermark.type';
+    import type { DragOptions } from 'svelte-drag';
+    import FontService from '../services/font.service';
+    import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+    import { FontAwesomeIcon } from 'fontawesome-svelte';
 
     export let image: string;
     export let watermarks: Watermark[];
@@ -15,11 +15,11 @@
 
     const dispatch = createEventDispatcher();
     let shift = 48; // Correct px to get the same output between preview and real watermarked image (due to <p> line-height)
-    const url = "http://localhost:8088/showImage/" + image; // Should put localhost:8088 in a variable to avoid magic string
+    const url = 'http://localhost:8088/showImage/' + image; // Should put localhost:8088 in a variable to avoid magic string
 
     let mouseEndPosition = { x: 0, y: 0 };
     let mouseWhenDragStart = { x: 0, y: 0 };
-    let options: DragOptions = { bounds: "parent" };
+    let options: DragOptions = { bounds: 'parent' };
 
     // Reactive method to display the proper difference in px between preview and incrusted text
     $: if (font) {

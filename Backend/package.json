@@ -1,6 +1,6 @@
 {
     "name": "watermark-backend",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Watermark generator in nodejs with a frontend in svelte.",
     "main": "app.ts",
     "author": "Gautier LABARRE",
