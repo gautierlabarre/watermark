@@ -4,8 +4,8 @@ WORKDIR /usr/app
 
 COPY package*.json ./
 
-RUN npm install -g nodemon
-RUN npm install
+RUN npm install -g nodemon --no-audit
+RUN npm install --no-audit
 
 COPY . .
 
