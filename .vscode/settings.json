@@ -22,5 +22,17 @@
         "titleBar.inactiveForeground": "#e7e7e799"
     },
     "peacock.color": "#050f2c",
-    "editor.scrollBeyondLastLine": false
+    "editor.scrollBeyondLastLine": false,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        ".history": true,
+        ".idea": true,
+        ".nyc_output": true,
+        "**/node_modules": true
+    }
 }

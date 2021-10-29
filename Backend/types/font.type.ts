@@ -1,4 +1,4 @@
 export interface Font {
-    color: string,
-    size: string,
+    color: string;
+    size: string;
 }

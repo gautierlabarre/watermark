@@ -1,4 +1,6 @@
-export enum FontColor {
-    BLACK = "black",
-    WHITE = "white",
+enum FontColor {
+    BLACK = 'black',
+    WHITE = 'white',
 }
+
+export default FontColor;

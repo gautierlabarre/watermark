@@ -1,5 +1,5 @@
 export interface Watermark {
-    x: number,
-    y: number,
-    content: string,
+    x: number;
+    y: number;
+    content: string;
 }
