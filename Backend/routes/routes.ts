@@ -1,10 +1,10 @@
+import FontColor from '../Enums/fontColor.enum';
 import express, { Request, Response } from 'express';
 import Jimp from 'jimp';
 import multer from 'multer';
 import path from 'path';
 import fontPicker from '../services/fontPicker';
 import { Watermark } from '../types/watermark.type';
-import FontColor from '../Enums/fontColor.enum';
 
 const app = express.Router();
 const upload = multer({ dest: 'upload/' });
@@ -31,7 +31,6 @@ app.get('/showImage/:path', async (req: Request, res: Response) => {
 
 /**
  * Add watermark(s) to a specific image and returns a base64.
- *
  * ? Change how it works, it should upload file in a folder and retrieve it.
  * ? Unless i keep the base64 to avoid keeping in the fs.
  */

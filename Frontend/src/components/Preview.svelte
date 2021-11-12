@@ -48,6 +48,8 @@
      * If the user clicks on the end and the middle of the watermark, the X and Y position of the cursor
      * will not be the correct placement of the beginning and top of the text.
      * So we have to save those positions and substract them to the x and y position of the draggedEnd event.
+     * @param i position of watermark in watermarks
+     * @param watermark
      */
     function draggedStart(i: number, watermark: Watermark) {
         mouseWhenDragStart.x = mouseWhenDragStart.x - watermark.x;
@@ -56,6 +58,10 @@
 
     /**
      * We change the watermark positionning and send the event to the parent component.
+     *
+     * @param i
+     * @param watermark
+     * @param event
      */
     function draggedEnded(i: number, watermark: Watermark, event) {
         watermark.x = event.detail.offsetX;

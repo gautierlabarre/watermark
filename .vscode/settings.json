@@ -32,7 +32,8 @@
         "**/Thumbs.db": true,
         ".history": true,
         ".idea": true,
+        ".nyc_output": true,
         "**/.nyc_output": true,
-        "**/node_modules": true
+        "**/node_modules": false
     }
 }

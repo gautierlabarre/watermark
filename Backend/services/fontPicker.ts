@@ -1,8 +1,13 @@
-import Jimp from 'jimp';
 import FontSize from '../Enums/fontSize.enum';
+import Jimp from 'jimp';
 
 export default class FontPicker {
-    public static selectBlackFontSize(size: string) {
+    /**
+     * Select black font size
+     * @param size string
+     * @returns string
+     */
+    public static selectBlackFontSize(size: string): string {
         let font = Jimp.FONT_SANS_16_BLACK;
 
         switch (size) {
@@ -27,7 +32,12 @@ export default class FontPicker {
         return font;
     }
 
-    public static selectWhiteFontSize(size: string) {
+    /**
+     * Select white font size
+     * @param size string
+     * @returns string
+     */
+    public static selectWhiteFontSize(size: string): string {
         let font = Jimp.FONT_SANS_16_WHITE;
 
         // eslint-disable-next-line default-case
