@@ -14,7 +14,6 @@ export default class FontPicker {
             case FontSize.SMALL:
                 font = Jimp.FONT_SANS_8_BLACK;
                 break;
-            case FontSize.NORMAL:
             case FontSize.BIG:
                 font = Jimp.FONT_SANS_32_BLACK;
                 break;
