@@ -1,30 +1,26 @@
 version: "3"
 services:
   backend:
+    image: node:17.1.0-alpine
     container_name: watermark_backend 
     working_dir: /usr/app
-    build:
-        context: ./Backend
+    entrypoint: /entrypoint.sh
+    command: npm start
     volumes:
       - ./Backend:/usr/app
-      - /usr/app/node_modules
+      - ./Backend/entrypoint.sh:/entrypoint.sh
     ports: 
       - '8088:8088' 
-    networks:
-      - watermark
   
   frontend:
+    image: node:17.1.0-alpine
     container_name: watermark_frontend
-    build:
-      context: ./Frontend
+    user: $DOCKER_USER # mandatory for node_modules chown
+    working_dir: /app
+    entrypoint: /entrypoint.sh
+    command: "npm run serve"
     volumes:
       - ./Frontend:/app
-      - /app/node_modules/
+      - ./Frontend/entrypoint.sh:/entrypoint.sh
     ports:
       - '8080:8080'
-    networks:
-      - watermark
-
-networks:
-  watermark:
-    driver: bridge
