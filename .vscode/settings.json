@@ -31,6 +31,6 @@
         ".idea": true,
         ".nyc_output": true,
         "**/.nyc_output": true,
-        "**/node_modules": false
+        "**/node_modules": true
     }
 }

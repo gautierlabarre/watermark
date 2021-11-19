@@ -5,3 +5,4 @@ Backend/test2.png
 Frontend/.nyc_output/
 Frontend/coverage/
 Frontend/cypress/downloads/
+Frontend/test-results/

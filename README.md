@@ -28,3 +28,15 @@ The coverage is weird anyway, istanbul is not doing a proper work here, it's exp
 https://github.com/bahmutov/cypress-svelte-unit-test 
 ```sudo ln -s /home/gautier/Code/watermark/Frontend /app ```
 If you know how to fix this, please submit a pull request or just add an issue :) (or email me
+
+## Playwright experiment
+
+I'm trying to implement the same tests with playwright, just for fun.
+First issue, it gets in conflict with spec file from cypress, so i'have to specify the tests/ folder :
+```
+npx playwright test tests
+```
+Then, it'll add a .zip and a video into test-results/ folder. You can review profiler with :
+```
+npx playwright show-trace test-results/**/trace.zip
+```
